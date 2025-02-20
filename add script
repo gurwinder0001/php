@@ -1,0 +1,61 @@
+<!--  Write in theme.php  -->
+
+
+function add_custom_script_to_footer() { ?>
+<script>
+jQuery(document).ready(function () { 
+	
+		jQuery("#showAll").click(function(){
+			jQuery(".read-more-c").css("height", "auto");
+			jQuery( ".read-more-c" ).removeClass( "read-more-c" );
+		//alert();
+		});
+});
+
+</script>	
+<?php }
+add_action('wp_footer', 'add_custom_script_to_footer',9999);
+
+
+
+
+/*custom button */
+<div class="butm21">
+    <button id="showAll" class="c-button">Show More</button>
+</div>
+
+/* <a id="showAll" class="c-button" href="javascript:void(0);">
+Show More
+</a> 
+
+function add_custom_jquery_code() {
+    ?>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery("#showAll").click(function() {
+                var fullHeight = jQuery(".read-more-c").prop('scrollHeight');
+                jQuery(".read-more-c").css('height', fullHeight + 'px');
+            });
+        });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'add_custom_jquery_code');
+*/
+/*css */
+.butm21 {
+    text-align: center;
+}
+.c-button {
+		font-family: "Montserrat", Sans-serif;
+		 font-weight: 500;
+		 fill: #000000;
+		 color: #000000;
+		 background-color: #61CE7000;
+		 border-style: solid;
+		border-width: 1px 1px 1px 1px;
+		border-color: #000000 !important;
+		border-radius: 11px 11px 11px 11px;
+		padding: 10px 25px;
+	}
+
