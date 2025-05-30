@@ -1,0 +1,6 @@
+define('FS_METHOD', 'direct');
+
+
+
+above this line
+/* That's all, stop editing! Happy publishing. */
